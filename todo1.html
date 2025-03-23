@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="todo.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(77, 117, 234, 0.5), rgba(19, 19, 185, 0.5)), url("bluebg.webp") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: rgb(220, 220, 220);
+        }
+
+        .todo-container {
+            background: rgb(146, 113, 223);
+            width: 350px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: rgb(20, 55, 95);
+            margin-bottom: 10px;
+        }
+
+        #input-box {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #638de1;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        #input-button {
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #6c36c2;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 15px;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            background: white;
+            color: rgb(23, 86, 159);
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .edit-btn, .delete-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #236cd2;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h2>My To-Do List</h2>
+        <input type="text" id="input-box" placeholder="Add a task...">
+        <button id="input-button" onclick="addTask()">Add</button>
+        <ul id="task-list"></ul>
+    </div>
+
+    <script type="text/javascript" src="todo.js"></script>
+
+</body>
+</html>
